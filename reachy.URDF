@@ -3,10 +3,10 @@
 
 <!-- Torso Link -->
 
-<link name="Torso">
+<link name="torso">
     <inertial>
         <origin xyz="0.0 0.019 -0.009" rpy="0.0 0.0 0.0"/>
-        <mass value="0.527.0"/>
+        <mass value="0.527"/>
         <inertia ixx="2.89598e-3" ixy="-1.16791e-6" ixz="-8.28749e-6" iyy="4.491e-3" iyz="2.343e-4" izz="3.995e-3"/>
     </inertial>
     <visual name="">
@@ -25,7 +25,7 @@
 
 <!-- Head Links -->
 
-<link name="Head">
+<link name="head">
     <inertial>
         <origin xyz="-0.009 -0.002 0.059" rpy="0.0 0.0 0.0"/>
         <mass value="0.237"/>
@@ -441,17 +441,18 @@
 <joint name="r_shoulder_roll" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
     <parent link="r_shoulder"/>
-    <child link="r_shoulder2arm"/>
+    <child link="r_shoulder_x"/>
     <axis xyz="1 0 0"/>
    <limit lower="-1.745" upper="1.57" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="r_arm_yaw" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
-    <parent link="r_shoulder2arm"/>
+    <parent link="r_shoulder_x"/>
     <child link="r_upper_arm"/>
     <axis xyz="0 0 1"/>
    <limit lower="-1.57" upper="1.57" effort="10." velocity="0.0"/>
+</joint>
 
 <joint name="r_elbow_pitch" type="revolute">
     <origin xyz="0 0 -0.28" rpy="0.0 0.0 0.0"/>
@@ -507,14 +508,14 @@
 <joint name="l_shoulder_roll" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
     <parent link="l_shoulder"/>
-    <child link="l_shoulder2arm"/>
+    <child link="l_shoulder_x"/>
     <axis xyz="1 0 0"/>
    <limit lower="-1.57" upper="1.745" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="l_arm_yaw" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
-    <parent link="l_shoulder2arm"/>
+    <parent link="l_shoulder_x"/>
     <child link="l_upper_arm"/>
     <axis xyz="0 0 1"/>
    <limit lower="-1.57" upper="1.57" effort="10." velocity="0.0"/> 
@@ -560,6 +561,12 @@
     <child link="l_gripper_finger"/>
     <axis xyz="1 0 0"/>
    <limit lower="-0.35" upper="1.2" effort="10." velocity="0.0"/>
+</joint>
+
+<joint name="torso2head" type="fixed">
+    <origin xyz="0 0 0.25" rpy="0 0 0" />
+    <parent link="torso" />
+    <child link="head" />
 </joint>
 
 </robot>
