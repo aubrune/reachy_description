@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>reachy_description</name>
+  <version>0.0.1</version>
+  <description>ROS package for the Reachy robot</description>
+  <maintainer email="yoan.mollard@poppy-station.org">Yoan Mollard</maintainer>
+  <license>Apache</license>
+  <url type="website">http://pollen-robotics.com</url>
+
+  <depend>robot_state_publisher</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>rviz</depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+  </export>
+</package>
