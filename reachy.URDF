@@ -435,7 +435,7 @@
     <parent link="torso"/> 
     <child link="r_shoulder"/>
     <axis xyz="0 1 0"/>
-   <limit lower="-3.14" upper="1.0412" effort="10." velocity="0.0"/>
+   <limit lower="-2.618" upper="1.57" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="r_shoulder_roll" type="revolute">
@@ -443,7 +443,7 @@
     <parent link="r_shoulder"/>
     <child link="r_shoulder_x"/>
     <axis xyz="1 0 0"/>
-   <limit lower="-1.745" upper="1.57" effort="10." velocity="0.0"/>
+   <limit lower="-3.14" upper="0.174" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="r_arm_yaw" type="revolute">
@@ -459,7 +459,7 @@
     <parent link="r_upper_arm"/>
     <child link="r_forearm"/>
     <axis xyz="0 1 0"/>
-   <limit lower="0" upper="2.182" effort="10." velocity="0.0"/>
+   <limit lower="-2.182" upper="0" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="r_forearm_yaw" type="revolute">
@@ -467,7 +467,7 @@
     <parent link="r_forearm"/>
     <child link="r_wrist"/>
     <axis xyz="0 0 1"/>
-   <limit lower="-1.175" upper="1.175" effort="10." velocity="0.0"/>
+   <limit lower="-1.745" upper="1.745" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="r_wrist_pitch" type="revolute">
@@ -502,7 +502,7 @@
     <parent link="torso"/>
     <child link="l_shoulder"/>
     <axis xyz="0 1 0"/>
-   <limit lower="-1.0412" upper="3.14" effort="10." velocity="0.0"/>
+   <limit lower="-2.618" upper="1.57" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="l_shoulder_roll" type="revolute">
@@ -510,7 +510,7 @@
     <parent link="l_shoulder"/>
     <child link="l_shoulder_x"/>
     <axis xyz="1 0 0"/>
-   <limit lower="-1.57" upper="1.745" effort="10." velocity="0.0"/>
+   <limit lower="-0.174" upper="3.14" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="l_arm_yaw" type="revolute">
@@ -526,7 +526,7 @@
     <parent link="l_upper_arm"/>
     <child link="l_forearm"/>
     <axis xyz="0 1 0"/>
-   <limit lower="0" upper="2.182" effort="10." velocity="0.0"/>
+   <limit lower="-2.182" upper="0" effort="10." velocity="0.0"/>
 </joint>
 
 <joint name="l_forearm_yaw" type="revolute">
@@ -534,7 +534,7 @@
     <parent link="l_forearm"/>
     <child link="l_wrist"/>
     <axis xyz="0 0 1"/>
-   <limit lower="-1.175" upper="1.175" effort="10." velocity="0.0"/>
+   <limit lower="-1.745" upper="1.745" effort="10." velocity="0.0"/>
 </joint>
 
 
@@ -564,7 +564,7 @@
 </joint>
 
 <joint name="torso2head" type="fixed">
-    <origin xyz="0 0 0.25" rpy="0 0 0" />
+    <origin xyz="0.015 0.0 0.095" rpy="0 0.174 0" />
     <parent link="torso" />
     <child link="head" />
 </joint>
