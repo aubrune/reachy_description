@@ -3,6 +3,8 @@
 
 <!-- Torso Link -->
 
+<link name="pedestal"/>
+
 <link name="torso">
     <inertial>
         <origin xyz="0.0 0.019 -0.009" rpy="0.0 0.0 0.0"/>
@@ -235,6 +237,9 @@
     </collision>
 </link>
 
+<link name="right_tip"/>
+
+
 <!-- Left Arm Links -->
 
 <link name="l_shoulder">
@@ -397,7 +402,15 @@
     </collision>
 </link>
 
-<!-- Head joints -->
+<link name="left_tip"/>
+
+<!-- Head and Torso joints -->
+
+<joint name="pedestal" type="fixed">
+    <origin xyz="0 0 1" rpy="0 0 0" />
+    <parent link="pedestal" />
+    <child link="torso" />
+</joint>
 
 <joint name="r_antenna" type="revolute">
     <origin xyz="-0.052 -0.057 0.086" rpy="-0.166 -1.054 1.11"/>
@@ -483,6 +496,11 @@
    <limit lower="-1.2" upper="0.35" effort="10." velocity="0.0"/>
 </joint>
 
+<joint name="r_tip" type="fixed">
+    <origin xyz="0 0.025 -0.045" rpy="0 0 0" />
+    <parent link="r_gripper_finger" />
+    <child link="right_tip" />
+</joint>
 
 <!-- Left arm joints -->
 <joint name="l_shoulder_pitch" type="revolute">
@@ -549,6 +567,12 @@
     <child link="l_gripper_finger"/>
     <axis xyz="1 0 0"/>
    <limit lower="-0.35" upper="1.2" effort="10." velocity="0.0"/>
+</joint>
+
+<joint name="l_tip" type="fixed">
+    <origin xyz="0 -0.025 -0.045" rpy="0 0 0" />
+    <parent link="l_gripper_finger" />
+    <child link="left_tip" />
 </joint>
 
 <joint name="torso2head" type="fixed">

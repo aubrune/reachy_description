@@ -115,6 +115,14 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        left_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        pedestal:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         r_antenna:
           Alpha: 1
           Show Axes: false
@@ -160,6 +168,10 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        right_tip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         torso:
           Alpha: 1
           Show Axes: false
@@ -196,6 +208,10 @@ Visualization Manager:
           Value: true
         l_wrist2hand:
           Value: true
+        left_tip:
+          Value: true
+        pedestal:
+          Value: true
         r_antenna:
           Value: true
         r_forearm:
@@ -214,46 +230,59 @@ Visualization Manager:
           Value: true
         r_wrist2hand:
           Value: true
+        right_tip:
+          Value: true
         torso:
           Value: true
       Marker Alpha: 1
-      Marker Scale: 0.10000000149011612
+      Marker Scale: 0.20000000298023224
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        torso:
-          head:
-            l_antenna:
-              {}
-            r_antenna:
-              {}
-          l_shoulder:
-            l_shoulder_x:
-              l_upper_arm:
-                l_forearm:
-                  l_wrist:
-                    l_wrist2hand:
-                      l_gripper_thumb:
-                        l_gripper_finger:
-                          {}
-          r_shoulder:
-            r_shoulder_x:
-              r_upper_arm:
-                r_forearm:
-                  r_wrist:
-                    r_wrist2hand:
-                      r_gripper_thumb:
-                        r_gripper_finger:
-                          {}
+        pedestal:
+          torso:
+            head:
+              l_antenna:
+                {}
+              r_antenna:
+                {}
+            l_shoulder:
+              l_shoulder_x:
+                l_upper_arm:
+                  l_forearm:
+                    l_wrist:
+                      l_wrist2hand:
+                        l_gripper_thumb:
+                          l_gripper_finger:
+                            left_tip:
+                              {}
+            r_shoulder:
+              r_shoulder_x:
+                r_upper_arm:
+                  r_forearm:
+                    r_wrist:
+                      r_wrist2hand:
+                        r_gripper_thumb:
+                          r_gripper_finger:
+                            right_tip:
+                              {}
       Update Interval: 0
       Value: true
+    - Alpha: 1
+      Class: rviz/Axes
+      Enabled: false
+      Length: 1
+      Name: Axes
+      Radius: 0.10000000149011612
+      Reference Frame: <Fixed Frame>
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: torso
+    Fixed Frame: pedestal
     Frame Rate: 30
   Name: root
   Tools:
@@ -277,7 +306,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.1761620044708252
+      Distance: 1.6814242601394653
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -285,17 +314,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.03631293773651123
-        Y: -0.009654901921749115
-        Z: 0.005733962636440992
+        X: -0.11217460036277771
+        Y: -0.0717979222536087
+        Z: 0.7290922403335571
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.63979572057724
+      Pitch: 0.4097955822944641
       Target Frame: <Fixed Frame>
-      Yaw: 6.115411758422852
+      Yaw: 6.27540922164917
     Saved: ~
 Window Geometry:
   Displays:
@@ -313,5 +342,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1848
-  X: 72
+  X: 1992
   Y: 27
