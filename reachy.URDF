@@ -497,8 +497,8 @@
 </joint>
 
 <joint name="r_tip" type="fixed">
-    <origin xyz="0 0.025 -0.045" rpy="0 0 0" />
-    <parent link="r_gripper_finger" />
+    <origin xyz="0 -0.012 -0.085" rpy="0 0 0" />
+    <parent link="r_gripper_thumb" />
     <child link="right_tip" />
 </joint>
 
@@ -570,8 +570,8 @@
 </joint>
 
 <joint name="l_tip" type="fixed">
-    <origin xyz="0 -0.025 -0.045" rpy="0 0 0" />
-    <parent link="l_gripper_finger" />
+    <origin xyz="0 0.012 -0.085" rpy="0 0 0" />
+    <parent link="l_gripper_thumb" />
     <child link="left_tip" />
 </joint>
 
