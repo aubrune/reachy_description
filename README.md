@@ -8,3 +8,9 @@ Launch the following command in order to run RViz, visualize the robot and move 
 ```
 roslaunch reachy_description display.launch gui:=True
 ```
+
+## TODO
+* [ ] Center joints at the center of motor axes
+  * Avoid manual editing: will invalidate inertias
+  * Display tf frames and clean up overlaps
+* [ ] Correct right/left arm symmetry
