@@ -575,10 +575,44 @@
     <child link="left_tip" />
 </joint>
 
+<!-- Head joint... -->
+
+<!-- ...with a fixed joint -->
+<!--
 <joint name="torso2head" type="fixed">
     <origin xyz="0.015 0.0 0.095" rpy="0 0.174 0" />
     <parent link="torso" />
     <child link="head" />
+</joint>
+-->
+
+<!-- ...with a ball joint -->
+<joint name="head_roll" type="revolute">
+    <origin xyz="0.015 0.0 0.095" rpy="0 0.174 0" />
+    <parent link="torso"/>
+    <child link="head_x"/>
+    <axis xyz="1 0 0"/>
+   <limit lower="0" upper="0.8" effort="10." velocity="0.0"/>
+</joint>
+
+<link name="head_x" />
+
+<joint name="head_pitch" type="revolute">
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+    <parent link="head_x"/>
+    <child link="head_y"/>
+    <axis xyz="0 1 0"/>
+   <limit lower="0" upper="0.8" effort="10." velocity="0.0"/>
+</joint>
+
+<link name="head_y" />
+
+<joint name="head_yaw" type="revolute">
+    <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
+    <parent link="head_y"/>
+    <child link="head"/>
+    <axis xyz="0 0 1"/>
+   <limit lower="0" upper="0.8" effort="10." velocity="0.0"/>
 </joint>
 
 </robot>
