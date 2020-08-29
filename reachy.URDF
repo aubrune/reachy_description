@@ -623,4 +623,22 @@
     <child link="head" />
 </joint>
 
+<!-- Cameras -->
+
+<joint name="left_cam_fixed" type="fixed">
+    <origin xyz="0 0.04 0.06" rpy="0.0 0.0 0.0"/>
+    <parent link="head" />
+    <child link="left_camera" />
+</joint>
+
+<link name="left_camera" />
+
+<joint name="right_cam_fixed" type="fixed">
+    <origin xyz="0 -0.04 0.06" rpy="0.0 0.0 0.0"/>
+    <parent link="head" />
+    <child link="right_camera" />
+</joint>
+
+<link name="right_camera" />
+
 </robot>
