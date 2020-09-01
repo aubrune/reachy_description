@@ -595,7 +595,14 @@
    <limit lower="0" upper="0.8" effort="10." velocity="0.0"/>
 </joint>
 
-<link name="head_x" />
+<link name="head_x">
+    <visual name="">
+        <origin xyz="0.0 0.0 -0.048" rpy="0.0 0.0 0.5236"/>
+        <geometry>
+            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
+        </geometry>
+    </visual>
+</link>
 
 <joint name="orbita_pitch" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
@@ -605,7 +612,14 @@
    <limit lower="0" upper="0.8" effort="10." velocity="0.0"/>
 </joint>
 
-<link name="head_y" />
+<link name="head_y">
+    <visual name="">
+        <origin xyz="0.0 0.0 -0.048" rpy="0.0 0.0 2.618"/>
+        <geometry>
+            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
+        </geometry>
+    </visual>
+</link>
 
 <joint name="orbita_yaw" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
@@ -615,7 +629,14 @@
    <limit lower="-0.8" upper="0.8" effort="10." velocity="0.0"/>
 </joint>
 
-<link name="head_z" />
+<link name="head_z">
+    <visual name="">
+        <origin xyz="0.0 0.0 -0.048" rpy="0.0 0.0 -1.57"/>
+        <geometry>
+            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
+        </geometry>
+    </visual>
+</link>
 
 <joint name="orbita_fixed" type="fixed">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
