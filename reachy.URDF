@@ -595,14 +595,7 @@
    <limit lower="0" upper="0.8" effort="10." velocity="0.0"/>
 </joint>
 
-<link name="head_x">
-    <visual name="">
-        <origin xyz="0.0 0.0 -0.048" rpy="0.0 0.0 0.5236"/>
-        <geometry>
-            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
-        </geometry>
-    </visual>
-</link>
+<link name="head_x" />
 
 <joint name="orbita_pitch" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
@@ -612,14 +605,7 @@
    <limit lower="0" upper="0.8" effort="10." velocity="0.0"/>
 </joint>
 
-<link name="head_y">
-    <visual name="">
-        <origin xyz="0.0 0.0 -0.048" rpy="0.0 0.0 2.618"/>
-        <geometry>
-            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
-        </geometry>
-    </visual>
-</link>
+<link name="head_y" />
 
 <joint name="orbita_yaw" type="revolute">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
@@ -629,20 +615,60 @@
    <limit lower="-0.8" upper="0.8" effort="10." velocity="0.0"/>
 </joint>
 
-<link name="head_z">
-    <visual name="">
-        <origin xyz="0.0 0.0 -0.048" rpy="0.0 0.0 -1.57"/>
-        <geometry>
-            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
-        </geometry>
-    </visual>
-</link>
+<link name="head_z" />
 
 <joint name="orbita_fixed" type="fixed">
     <origin xyz="0 0 0" rpy="0.0 0.0 0.0"/>
     <parent link="head_z" />
     <child link="head" />
 </joint>
+
+<!-- Fixed Orbita Arms Visuals -->
+
+<joint name="orbita_top" type="fixed">
+    <origin xyz="0.0067 0.0 0.0478" rpy="0 0.174 0"/>
+    <parent link="torso"/>
+    <child link="top_arm"/>
+</joint>
+
+<link name="top_arm">
+    <visual name="">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.5236"/>
+        <geometry>
+            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
+        </geometry>
+    </visual>
+</link>
+
+<joint name="orbita_middle" type="fixed">
+    <origin xyz="0.0067 0.0 0.0478" rpy="0 0.174 0"/>
+    <parent link="torso"/>
+    <child link="middle_arm"/>
+</joint>
+
+<link name="middle_arm">
+    <visual name="">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 2.618"/>
+        <geometry>
+            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
+        </geometry>
+    </visual>
+</link>
+
+<joint name="orbita_bottom" type="fixed">
+    <origin xyz="0.0067 0.0 0.0478" rpy="0 0.174 0"/>
+    <parent link="torso"/>
+    <child link="bottom_arm"/>
+</joint>
+
+<link name="bottom_arm">
+    <visual name="">
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -1.57"/>
+        <geometry>
+            <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
+        </geometry>
+    </visual>
+</link>
 
 <!-- Cameras -->
 
