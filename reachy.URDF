@@ -59,6 +59,12 @@
             <mesh filename="package://reachy_description/meshes/antenna.dae"/>
         </geometry>
     </visual>
+    <collision>
+        <origin xyz="0.1 0.0 0.1" rpy="0.0 0 0.0"/>
+        <geometry>
+            <cylinder length="0.0" radius="0.0" />
+        </geometry>
+    </collision>
 </link>
 
 <link name="r_antenna">
@@ -73,6 +79,12 @@
             <mesh filename="package://reachy_description/meshes/antenna.dae"/>
         </geometry>
     </visual>
+    <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder length="0.0" radius="0.0" />
+        </geometry>
+    </collision>
 </link>
 
 <!-- Right Arm Links -->
@@ -628,46 +640,64 @@
 <joint name="orbita_top" type="fixed">
     <origin xyz="0.0067 0.0 0.0478" rpy="0 0.174 0"/>
     <parent link="torso"/>
-    <child link="top_arm"/>
+    <child link="top_orbita_arm"/>
 </joint>
 
-<link name="top_arm">
+<link name="top_orbita_arm">
     <visual name="">
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.5236"/>
         <geometry>
             <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
         </geometry>
     </visual>
+    <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder length="0.0" radius="0.0" />
+        </geometry>
+    </collision>
 </link>
 
 <joint name="orbita_middle" type="fixed">
     <origin xyz="0.0067 0.0 0.0478" rpy="0 0.174 0"/>
     <parent link="torso"/>
-    <child link="middle_arm"/>
+    <child link="middle_orbita_arm"/>
 </joint>
 
-<link name="middle_arm">
+<link name="middle_orbita_arm">
     <visual name="">
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 2.618"/>
         <geometry>
             <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
         </geometry>
     </visual>
+    <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder length="0.0" radius="0.0" />
+        </geometry>
+    </collision>
 </link>
 
 <joint name="orbita_bottom" type="fixed">
     <origin xyz="0.0067 0.0 0.0478" rpy="0 0.174 0"/>
     <parent link="torso"/>
-    <child link="bottom_arm"/>
+    <child link="bottom_orbita_arm"/>
 </joint>
 
-<link name="bottom_arm">
+<link name="bottom_orbita_arm">
     <visual name="">
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -1.57"/>
         <geometry>
             <mesh filename="package://reachy_description/meshes/orbita_arm.dae"/>
         </geometry>
     </visual>
+    <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <geometry>
+            <cylinder length="0.0" radius="0.0" />
+        </geometry>
+    </collision>
 </link>
 
 <!-- Cameras -->
