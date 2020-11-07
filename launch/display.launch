@@ -1,7 +1,11 @@
 <launch>
       <arg name="model" />
       <arg name="gui" default="False" />
-      <param name="robot_description" textfile="$(find reachy_description)/reachy.URDF" />
+      <arg name="head" default="True" />
+      <arg name="left_arm" default="True" />
+      <arg name="right_arm" default="True" />
+
+      <param name="robot_description" command="$(find xacro)/xacro $(find reachy_description)/reachy.URDF.xacro head:=$(arg head) right_arm:=$(arg right_arm) left_arm:=$(arg left_arm)" />
       <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" unless="$(arg gui)"/>
       <node name="joint_state_publisher" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" if="$(arg gui)"/>
       <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
