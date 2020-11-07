@@ -2,6 +2,8 @@
 
 This ROS package contains URDF and collada files to use the [Reachy](https://pollen-robotics.com) robot with ROS1 Noetic.
 
+![Reachy in RViz ROS Melodic](./img/reachy_urdf_rviz.png)
+
 ## Quickstart
 
 Launch the following command in order to run RViz, visualize the robot and move the joints:
